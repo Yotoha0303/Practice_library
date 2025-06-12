@@ -292,5 +292,155 @@ library Math {
         return true;
     }
 
-    
+    function sqrt(uint256 a) internal pure returns(uint256){
+        unchecked {
+            if(a<=1){
+                return a;
+            }
+
+            uint256 aa = a;
+            uint256 xn = 1;
+
+            if(aa>=(1<<128)){
+                aa >>= 128;
+                xn >>= 64;
+            }
+
+            if(aa>=(1<<64)){
+                aa >>= 64;
+                xn <<= 32;
+            }
+
+            if(aa>=(1<<32)){
+                aa>>=32;
+                xn<<=16;
+            }
+
+            if(aa>=(1<<16)){
+                aa>>=16;
+                xn<<=8;
+            }
+
+            if(aa>=(1<<8)){
+                aa>>=8;
+                xn<<=4;
+            }
+
+            if(aa>=(1<<4)){
+                aa>>=4;
+                xn<<=2;
+            }
+
+            if(aa>=(1<<2)){
+                xn<<=1;
+            }
+
+            xn = (3*xn) >> 1;
+
+            xn = (xn+a/xn)>>1;
+            xn = (xn+a/xn)>>1;
+            xn = (xn+a/xn)>>1;
+            xn = (xn+a/xn)>>1;
+            xn = (xn+a/xn)>>1;
+            xn = (xn+a/xn)>>1;
+
+            return xn - SafeCast.toUint(xn>a/xn);
+        }
+    }
+
+    function sqrt(uint256 a,Rounding rounding) internal pure returns(uint256){
+        unchecked {
+            uint256 result = sqrt(a);
+            return result + SafeCast.toUint(unsignedRoundsUp(rounding)&& result*result<a);
+        }
+    }
+
+    function log2(uint256 x) internal pure returns(uint256 r){
+        r = SafeCast.toUint(x>0xffffffffffffffffffffffffffffffff) << 7;
+
+        r |= SafeCast.toUint((x>>r) > 0xffffffffffffffff)<<6;
+
+        r |= SafeCast.toUint((x>>r) > 0xffffffff) << 5;
+
+        r |= SafeCast.toUint((x>>r) > 0xffff) << 4;
+
+        r |= SafeCast.toUint((x>>r)>0xff) << 3;
+
+        r |= SafeCast.toUint((x>>r)>0xf) << 2;
+
+        assembly("memory-safe") {
+            r := or(r,byte(shr(r,x),0x0000010102020202030303030303030300000000000000000000000000000000))
+        }
+    }
+
+    function log2(uint256 value,Rounding rounding) internal pure returns(uint256){
+        unchecked {
+            uint256 result = log2(value);
+            return result + SafeCast.toUint(unsignedRoundsUp(rounding)&&1<<result < value);
+        }
+    }
+
+    function log10(uint256 value) internal pure returns(uint256){
+        uint256 result = 0;
+        unchecked {
+            if(value>=10**64){
+                value /= 10 ** 64;
+                result += 64;
+            }
+            if(value>=10**32){
+                value /= 10 ** 32;
+                result += 32;
+            }
+            if(value>=10**16){
+                value /= 10 ** 16;
+                result += 16;
+            }
+            if(value>=10**8){
+                value /= 10 ** 8;
+                result += 8;
+            }
+            if(value>=10**4){
+                value /= 10 ** 4;
+                result += 4;
+            }
+            if(value>=10**2){
+                value /= 10 ** 2;
+                result += 2;
+            }
+            if(value>=10**1){
+                result += 1;
+            }
+        }
+        return result;
+    }
+
+    function log10(uint256 value,Rounding rounding) internal pure returns(uint256){
+        unchecked {
+            uint256 result = log10(value);
+            return result + SafeCast.toUint(unsignedRoundsUp(rounding)&&10**result<value);
+        }
+    }
+
+    function log256(uint256 x) internal pure returns(uint256 r){
+        r = SafeCast.toUint(x > 0xffffffffffffffffffffffffffffffff) << 7;
+
+        r |= SafeCast.toUint((x>>r) > 0xffffffffffffffff) << 6;
+
+        r |= SafeCast.toUint((x>>r) > 0xffffffff ) << 5;
+
+        r |= SafeCast.toUint((x>>r) > 0xffff) << 4;
+
+        return (r>>3) | SafeCast.toUint((x>>r) > 0xff);
+    }
+
+    function log256(uint256 value,Rounding rounding) internal pure returns(uint256){
+        unchecked {
+            uint256 result = log256(value);
+            return result + SafeCast.toUint(unsignedRoundsUp(rounding) && 1 << (result << 3) < value);
+        }
+    }
+
+    function unsignedRoundsUp(Rounding rounding) internal pure returns(bool){
+        return uint8(rounding) % 2 == 1;
+    }
 }
