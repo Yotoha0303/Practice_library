@@ -9,7 +9,7 @@ library Panic {
 
     uint256 internal constant UNDER_OVERFLOW = 0x11;
 
-    uint256 internal constant DIVSION_BY_ZERO = 0x12;
+    uint256 internal constant DIVISION_BY_ZERO = 0x12;
 
     uint256 internal constant ENUM_CONVERSION_ERROR = 0x21;
 

@@ -65,8 +65,8 @@ library Math {
             assembly ("memory-safe") {
                 success := or(eq(div(c,a),b),iszero(a))
             }
+            result = c * SafeCast.toUint(success);
         }
-        result = c * SafeCast.toUint(success)
     }
 
     function tryDiv(uint256 a,uint256 b) internal pure returns(bool success,uint256 result){
@@ -122,7 +122,7 @@ library Math {
 
     function ceilDiv(uint256 a,uint256 b) internal pure returns(uint256){
         if(b==0){
-            Panic.panic(Panic.DIVSION_BY_ZERO);
+            Panic.panic(Panic.DIVISION_BY_ZERO);
         }
 
         unchecked {
@@ -139,12 +139,12 @@ library Math {
             }
 
             if(denominator <= high){
-                Panic.panic(ternary(denominator == 0,Panic.DIVSION_BY_ZERO,Panic.UNDER_OVERFLOW));
+                Panic.panic(ternary(denominator == 0,Panic.DIVISION_BY_ZERO,Panic.UNDER_OVERFLOW));
             }
 
             uint256 remainder;
             assembly("memory-safe") {
-                remainder := mulmod(x,t,denominator)
+                remainder := mulmod(x,y,denominator)
 
                 high := sub(high,gt(remainder,low))
                 low := sub(low,remainder)
@@ -232,7 +232,7 @@ library Math {
     function modExp(uint256 b,uint256 e,uint256 m) internal view returns(uint256){
         (bool success,uint256 result) = tryModExp(b,e,m);
         if(!success){
-            Panic.panic(Panic.DIVSION_BY_ZERO);
+            Panic.panic(Panic.DIVISION_BY_ZERO);
         }
         return result;
     }
@@ -255,13 +255,14 @@ library Math {
         }
     }
 
-    function modExp(bytes memory b,bytes memory e,bytes memory m) internal view returns(bytes memory){
-        (bool success,bytes memory result) = tryModExp(b,e,m);
-        if(!success){
-            Panic.panic(Panic.DIVSION_BY_ZERO);
+     function modExp(bytes memory b, bytes memory e, bytes memory m) internal view returns (bytes memory) {
+        (bool success, bytes memory result) = tryModExp(b, e, m);
+        if (!success) {
+            Panic.panic(Panic.DIVISION_BY_ZERO);
         }
         return result;
     }
+
 
     function tryModExp(
         bytes memory b,
@@ -275,13 +276,14 @@ library Math {
         result = abi.encodePacked(b.length,e.length,mLen,b,e,m);
 
         assembly("memory-safe") {
-            let dataPrt := add(result,0x20)
+            let dataPtr := add(result,0x20)
             success := staticcall(gas(),0x05,dataPtr,mload(result),dataPtr,mLen)
 
             mstore(result,mLen)
             mstore(0x40,add(dataPtr,mLen))
         }
     }
+
 
     function _zeroBytes(bytes memory byteArray) private pure returns(bool){
         for(uint256 i=0;i<byteArray.length;++i){

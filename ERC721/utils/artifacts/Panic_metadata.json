@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC721/utils/Panic.sol": "Panic"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC721/utils/Panic.sol": {
+			"keccak256": "0x6be40bd866fede2f9401f651e50af8fbdac78d0bec8a578b5d162e9486291c58",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a9eb9dafbfd3828ac7aaba0dfa8ffb1d032f521030d724e03fc60b3a3234ffdb",
+				"dweb:/ipfs/QmRCJ25eQtJqmg5jBo1uAzmJZhMVMivHm4QyCGTBKrBqRA"
+			]
+		}
+	},
+	"version": 1
+}

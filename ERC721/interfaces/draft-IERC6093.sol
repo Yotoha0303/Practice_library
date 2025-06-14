@@ -1,55 +1,53 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity >=0.6.2;
+pragma solidity >=0.8.4;
 
-import {IERC165} from "./IERC165.sol";
-
-interface IERC6909 is IERC165 {
+interface IERC20Errors {
     
-    event Approval(address indexed owner,address indexed spender,uint256 indexed id,uint256 amount);
+    error ERC20InsufficientBalance(address sender,uint256 balance,uint256 needed);
 
-    event OperatorSet(address indexed owner,address indexed spender,bool approved);
+    error ERC20InvalidSender(address sender);
 
-    event Transfer(
-        address caller,
-        address indexed sender,
-        address indexed receiver,
-        uint256 indexed id,
-        uint256 amount
-    );
+    error ERC20InvalidReceiver(address receiver);
 
-    function balanceOf(address owner,uint256 id) external view returns(uint256);
+    error ERC20InsufficientAllowance(address spender,uint256 allowance,uint256 needed);
 
-    function allowance(address owner,address spender,uint256 id) external view returns(uint256);
+    error ERC20InvalidApprover(address approved);
 
-    function isOperator(address owner,address spender) external view returns(bool);
-
-    function approve(address spender,uint256 id,uint256 amount) external returns(bool);
-
-    function setOperator(address spender,bool approved) external returns(bool);
-
-    function transfer(address receiver,uint256 id,uint256 amount) external returns(bool);
-
-    function transferFrom(address sender,address receiver,uint256 id,uint256 amount) external returns(bool);
+    error ERC20InvalidSpender(address spender);
 }
 
-interface IERC6909Metadta is IERC6909 {
-    
-    function name(uint256 id) external view returns(string memory);
+interface IERC721Errors {
+    error ERC721InvalidOwner(address owner);
 
-    function symbol(uint256 id) external view returns(string memory);
+    error ERC721NonexistentToken(uint256 tokenId);
 
-    function decimals(uint256 id) external view returns(uint8);
+    error ERC721IncorrectOwner(address spender,uint256 tokenId,address owner);
+
+    error ERC721InvalidSender(address sender);
+
+    error ERC721InvalidReceiver(address receiver);
+
+    error ERC721InsufficientApproval(address operator,uint256 tokenId);
+
+    error ERC721InvalidApprover(address approver);
+
+    error ERC721InvalidOperator(address operator);
 }
 
-interface IERC6909ContentURI is IERC6909 {
-    
-    function contractURI() external view returns(string memory);
+interface IERC1155Errors {
 
-    function tokenURI(uint256 id) external view returns(string memory);
-}
-
-interface IERC6909TokenSupply is IERC6909 {
+    error ERC1155InsufficientBalance(address sender,uint256 balance,uint256 needed,uint256 tokenId);
     
-    function totalSupply(uint256 id) external view returns(uint256);
+    error ERC1155MissingApprovalForAll(address operator,address owner);
+
+    error ERC1155InvalidSender(address sender);
+
+    error ERC1155InvalidReceiver(address receiver);
+
+    error ERC1155InvalidApprover(address approver);
+
+    error ERC1155InvalidOperator(address operator);
+
+    error ERC1155InvalidArrayLength(uint256 idsLength,uint256 valuesLength);
 }

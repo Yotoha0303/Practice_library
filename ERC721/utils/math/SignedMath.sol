@@ -28,7 +28,7 @@ library SignedMath {
         return x + (int256(uint256(x) >> 255) & (a ^ b));
     }
 
-    function add(int256 n) internal pure returns (uint256) {
+    function abs(int256 n) internal pure returns (uint256) {
         unchecked {
             int256 mask = n >> 255;
 
