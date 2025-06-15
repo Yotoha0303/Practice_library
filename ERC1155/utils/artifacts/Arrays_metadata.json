@@ -1,0 +1,93 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC1155/utils/Array.sol": "Arrays"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC1155/utils/Array.sol": {
+			"keccak256": "0x1487b14a7ab8078230bbb41ff5479fe20b209d4d13320d7d2488abde4b242d9a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d987c3d8735d9eb8806531e0c744f9b790fa1fab0a78114c4ae3793966f6163e",
+				"dweb:/ipfs/QmWjm2n1wTwpMpDsro2XVKYr2FLkg5TxjiRfG3sv4T8hjp"
+			]
+		},
+		"ERC1155/utils/Comparators.sol": {
+			"keccak256": "0x3f3c00087b54f6be703838b6e1332afe5b526f293f07e5eec4d136e15ee2dbd9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f3ddd0e6a36da2572ee0c47a45455e3bec6cb9a08fd89ad30245641e91ca812b",
+				"dweb:/ipfs/QmXHkyws7JxPBYNohYwhsRyyVeFqqNSNcqzx2TtKgoUoqt"
+			]
+		},
+		"ERC1155/utils/Panic.sol": {
+			"keccak256": "0x6be40bd866fede2f9401f651e50af8fbdac78d0bec8a578b5d162e9486291c58",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a9eb9dafbfd3828ac7aaba0dfa8ffb1d032f521030d724e03fc60b3a3234ffdb",
+				"dweb:/ipfs/QmRCJ25eQtJqmg5jBo1uAzmJZhMVMivHm4QyCGTBKrBqRA"
+			]
+		},
+		"ERC1155/utils/SlotDerivation.sol": {
+			"keccak256": "0x1b4c8a428866a538d9661bf96bd096b9388117ec1880ef9686fd7441920ed3ab",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cba5b4a6f7177d505f0d3636b8f4265c03dcff78346a48d116b8177abe20284e",
+				"dweb:/ipfs/QmXVXZcL2JCDo3BQYia2iyRKxE76qCtJK4xXz5tMHvL8p5"
+			]
+		},
+		"ERC1155/utils/StorageSlot.sol": {
+			"keccak256": "0xebab159670ec530f34e1325855f3ea114dd953c121508279e11ca69466c88da4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9250b4fecea6283fb6dcb0a1950f61bd1c0bc6fe1217fa5eb978e7048a8beee6",
+				"dweb:/ipfs/QmavJbnXQTapNdxJA9M895iBUjaPnZ1skGrGmt72Nhsebe"
+			]
+		},
+		"ERC1155/utils/math/Math.sol": {
+			"keccak256": "0xf723d47166d40572743f9f86c2c3040d846cfc40d6dd8307e5a1519a1d1f077b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://648f35ee66279b16d29ab6bdb567870b83219876571afbea9e1651e5c69e67ce",
+				"dweb:/ipfs/QmWjVyhY6HFjAA9539wPMH6z2eB5QZkmVSnsKgsNroFH8G"
+			]
+		},
+		"ERC1155/utils/math/SafeCast.sol": {
+			"keccak256": "0xdbfb9b2621964f80a8cf5b73198c8f661cb44abd67c943ba694d04fcea87033d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3558fb634e02196b4b95ecaae09276826f66e5132e25ab2d1bdda4661bd5c7c8",
+				"dweb:/ipfs/QmNwBterKnsfaUC2PBV9LVGDGtgmv2NtEbzAdBY8oCKMHS"
+			]
+		}
+	},
+	"version": 1
+}

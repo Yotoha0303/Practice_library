@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.20;
 
-import {IERC1155Receiver} from "../interfaces/IERC1155Receiver";
-import {IERC1155Errors} from "../interfaces/draft-IERC6093";
+import {IERC1155Receiver} from "../interfaces/IERC1155Receiver.sol";
+import {IERC1155Errors} from "../interfaces/draft-IERC6093.sol";
 
 library ERC1155Utils{
     function checkOnERC1155Received(
@@ -49,7 +49,7 @@ library ERC1155Utils{
                     revert IERC1155Errors.ERC1155InvalidReceiver(to);
                 }else{
                     assembly("memory-safe") {
-                        revert(add(reason,0x20),mload(reason));
+                        revert(add(reason,0x20),mload(reason))
                     }
                 }
             }

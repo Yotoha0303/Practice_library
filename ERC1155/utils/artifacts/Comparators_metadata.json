@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC1155/utils/Comparators.sol": "Comparators"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC1155/utils/Comparators.sol": {
+			"keccak256": "0x3f3c00087b54f6be703838b6e1332afe5b526f293f07e5eec4d136e15ee2dbd9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f3ddd0e6a36da2572ee0c47a45455e3bec6cb9a08fd89ad30245641e91ca812b",
+				"dweb:/ipfs/QmXHkyws7JxPBYNohYwhsRyyVeFqqNSNcqzx2TtKgoUoqt"
+			]
+		}
+	},
+	"version": 1
+}

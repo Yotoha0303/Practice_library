@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: MIT
 
+pragma solidity ^0.8.20;
+
 import {IERC165} from "../interfaces/IERC165.sol";
 
 abstract contract ERC165 is IERC165 {

@@ -1,0 +1,69 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC1155/utils/ERC1155Utils.sol": "ERC1155Utils"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC1155/interfaces/IERC1155Receiver.sol": {
+			"keccak256": "0x6f1edd6b28ff68b8c75ca69891b315a11b51b651d730bdc2c0d9289e7295566d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3698c4db564684a3e70d17cb3f96441828b7df05b60581438cf51ff3ed2d18b",
+				"dweb:/ipfs/QmQap28ChLgxFZ8dYihzsAwtuzLLz8unvGuFEsmcam3ue3"
+			]
+		},
+		"ERC1155/interfaces/IERC165.sol": {
+			"keccak256": "0x2d6fc46d31428fa5ef0f6e0035ca303f02906cba7dd3befec57999532a5a7640",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7a86a841d1867e75074745476ca56b291849c7e2630e0b2187f26c22b9ab9bcb",
+				"dweb:/ipfs/QmXajHqheGja9YwkSMoM3T7ueyGHuVn4HgYNMiC7Qhrd6y"
+			]
+		},
+		"ERC1155/interfaces/draft-IERC6093.sol": {
+			"keccak256": "0x0e0ea831c1d6a393d3ed7738b085836cee4d0007882e965e669cdbedba12c5aa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c9fcee2125c929b64ec6c830d74c4b971e317ed63279f13327a63c37f03297f7",
+				"dweb:/ipfs/QmUckraAD3KnnsTVDb7QRHNntpKjwqrZtEip5kvMoxxCWt"
+			]
+		},
+		"ERC1155/utils/ERC1155Utils.sol": {
+			"keccak256": "0x209a4e374f87af08f5d03c0b63f42360454ff92ed4a3f196dc9c637b49fc0e48",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fe5f2ef3530356cd516fce308530fe383487c7cfc9e34034ff6dd78fe16436ac",
+				"dweb:/ipfs/QmYAhLZrFumsLkz4HZjQX7jhUz1Yy6YE38ZNBjLs9BooPL"
+			]
+		}
+	},
+	"version": 1
+}

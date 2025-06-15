@@ -1,0 +1,61 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC1155/utils/math/Math.sol": "Math"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC1155/utils/Panic.sol": {
+			"keccak256": "0x6be40bd866fede2f9401f651e50af8fbdac78d0bec8a578b5d162e9486291c58",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a9eb9dafbfd3828ac7aaba0dfa8ffb1d032f521030d724e03fc60b3a3234ffdb",
+				"dweb:/ipfs/QmRCJ25eQtJqmg5jBo1uAzmJZhMVMivHm4QyCGTBKrBqRA"
+			]
+		},
+		"ERC1155/utils/math/Math.sol": {
+			"keccak256": "0xf723d47166d40572743f9f86c2c3040d846cfc40d6dd8307e5a1519a1d1f077b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://648f35ee66279b16d29ab6bdb567870b83219876571afbea9e1651e5c69e67ce",
+				"dweb:/ipfs/QmWjVyhY6HFjAA9539wPMH6z2eB5QZkmVSnsKgsNroFH8G"
+			]
+		},
+		"ERC1155/utils/math/SafeCast.sol": {
+			"keccak256": "0xdbfb9b2621964f80a8cf5b73198c8f661cb44abd67c943ba694d04fcea87033d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3558fb634e02196b4b95ecaae09276826f66e5132e25ab2d1bdda4661bd5c7c8",
+				"dweb:/ipfs/QmNwBterKnsfaUC2PBV9LVGDGtgmv2NtEbzAdBY8oCKMHS"
+			]
+		}
+	},
+	"version": 1
+}

@@ -163,7 +163,7 @@ abstract contract ERC1155 is
             if(ids.length==1){
                 uint256 id = ids.unsafeMemoryAccess(0);
                 uint256 value = values.unsafeMemoryAccess(0);
-                ERC1155Utils.checkOnERC1155BatchReceived(operator, from, to, id, value, data);
+                ERC1155Utils.checkOnERC1155Received(operator, from, to, id, value, data);
             }else{
                 ERC1155Utils.checkOnERC1155BatchReceived(operator, from, to, ids, values, data);
             }
@@ -181,7 +181,7 @@ abstract contract ERC1155 is
         _updateWithAcceptanceCheck(from, to, ids, values, data);
     }
 
-    function _safeTransferFrom(address from,address to,uint256[] memory id,uint256[] memory value,bytes memory data) internal{
+    function _safeBatchTransferFrom(address from,address to,uint256[] memory ids,uint256[] memory values,bytes memory data) internal{
         if(to==address(0)){
             revert ERC1155InvalidReceiver(address(0));
         }
@@ -191,11 +191,11 @@ abstract contract ERC1155 is
         _updateWithAcceptanceCheck(from, to, ids, values, data);
     }
 
-    function setURI(string memory newuri) internal virtual{
+    function _setURI(string memory newuri) internal virtual{
         _uri = newuri;
     }
 
-    function _mint(address to,uint256[] memory values) internal{
+    function _mint(address to,uint256 id,uint256 value,bytes memory data) internal{
         if(to==address(0)){
             revert ERC1155InvalidReceiver(address(0));
         }

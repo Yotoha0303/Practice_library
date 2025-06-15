@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC1155/utils/StorageSlot.sol": "StorageSlot"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC1155/utils/StorageSlot.sol": {
+			"keccak256": "0xebab159670ec530f34e1325855f3ea114dd953c121508279e11ca69466c88da4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9250b4fecea6283fb6dcb0a1950f61bd1c0bc6fe1217fa5eb978e7048a8beee6",
+				"dweb:/ipfs/QmavJbnXQTapNdxJA9M895iBUjaPnZ1skGrGmt72Nhsebe"
+			]
+		}
+	},
+	"version": 1
+}

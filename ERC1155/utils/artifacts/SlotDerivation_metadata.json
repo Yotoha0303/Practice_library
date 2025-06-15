@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ERC1155/utils/SlotDerivation.sol": "SlotDerivation"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ERC1155/utils/SlotDerivation.sol": {
+			"keccak256": "0x1b4c8a428866a538d9661bf96bd096b9388117ec1880ef9686fd7441920ed3ab",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cba5b4a6f7177d505f0d3636b8f4265c03dcff78346a48d116b8177abe20284e",
+				"dweb:/ipfs/QmXVXZcL2JCDo3BQYia2iyRKxE76qCtJK4xXz5tMHvL8p5"
+			]
+		}
+	},
+	"version": 1
+}
